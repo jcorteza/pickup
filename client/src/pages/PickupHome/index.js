@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import {Link} from "react-router-dom";
 
 
 
@@ -22,8 +23,8 @@ class Pickup extends Component {
      <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="#home">Pick-Up</Navbar.Brand>
       <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#login">Login</Nav.Link>
+      <Nav.Link><Link to="/">Home</Link></Nav.Link>
+      <Nav.Link><Link to="/login">Login</Link></Nav.Link>
       <Nav.Link href="#features">Features</Nav.Link>
       <Nav.Link href="#pricing">About</Nav.Link>
     </Nav>
@@ -39,7 +40,7 @@ class Pickup extends Component {
             </h3>
               <h8>Schedule a hotshot pick up</h8>
             <p>
-      <Button variant='primary'>Schedule</Button>
+      <Button variant='primary'><Link to="/submit-order">Schedule</Link></Button>
         </p>
           <div>
             <h3>
@@ -47,7 +48,7 @@ class Pickup extends Component {
               </h3>
                 <h8>Quickly find hotshot deliveries locally.</h8>
                <p>
-              <Button variant='primary'>Register</Button>
+              <Button variant='primary'><Link to="/signup/driver">Register</Link></Button>
              </p>
           </div>
      </Jumbotron>
